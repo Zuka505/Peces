@@ -1,0 +1,151 @@
+.fish-tank {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/ocean.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.fish {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInVisibility {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.swimWave {
+  animation-name: fadeInVisibility, swimWave;
+}
+@keyframes swimWave {
+  0% { left: -300px; transform: translateY(0) scale(0.8) scaleX(1); }
+  10% { transform: translateY(-30px) scale(1) scaleX(1); }
+  50% { transform: translateY(30px) scaleX(1); }
+  100% { left: 100vw; transform: translateY(0) scaleX(-1); }
+}
+
+.swimZigzag {
+  animation-name: fadeInVisibility, swimZigzag;
+}
+@keyframes swimZigzag {
+  0% { left: -300px; transform: translateY(0) scale(0.8) scaleX(1); }
+  30% { transform: translateY(-50px) scaleX(1); }
+  60% { transform: translateY(50px) scaleX(1); }
+  100% { left: 100vw; transform: translateY(0) scaleX(-1); }
+}
+
+.swimLoop {
+  animation-name: fadeInVisibility, swimLoop;
+}
+@keyframes swimLoop {
+  0% { left: -300px; transform: translateY(0) scale(0.8) scaleX(1); }
+  30% { left: 20vw; transform: translateY(-100px) scaleX(1); }
+  60% { left: 50vw; transform: translateY(100px) scaleX(1); }
+  100% { left: 100vw; transform: translateY(0) scaleX(-1); }
+}
+
+.swimDive {
+  animation-name: fadeInVisibility, swimDive;
+}
+@keyframes swimDive {
+  0% { left: -300px; transform: translateY(-100px) scale(0.8) scaleX(1); }
+  30% { transform: translateY(100px) scaleX(1); }
+  60% { transform: translateY(-50px) scaleX(1); }
+  100% { left: 100vw; transform: translateY(50px) scaleX(-1); }
+}
+
+.swimCurve {
+  animation-name: fadeInVisibility, swimCurve;
+}
+@keyframes swimCurve {
+  0% { left: -300px; transform: translateY(0) scale(0.8) scaleX(1); }
+  50% { left: 50vw; transform: translateY(-200px) scaleX(1); }
+  100% { left: 100vw; transform: translateY(0) scaleX(-1); }
+}
+
+.swimFigure8 {
+  animation-name: fadeInVisibility, swimFigure8;
+}
+@keyframes swimFigure8 {
+  0% { left: -300px; top: 50%; transform: scale(0.8) scaleX(1); }
+  25% { left: 25vw; top: 30%; transform: scaleX(1); }
+  50% { left: 50vw; top: 70%; transform: scaleX(1); }
+  75% { left: 75vw; top: 30%; transform: scaleX(-1); }
+  100% { left: 100vw; top: 50%; transform: scaleX(-1); }
+}
+
+.swimWaveReverse {
+  animation-name: fadeInVisibility, swimWaveReverse;
+}
+@keyframes swimWaveReverse {
+  0% { left: 100vw; transform: translateY(0) scale(0.8) scaleX(-1); }
+  10% { transform: translateY(-30px) scale(1) scaleX(-1); }
+  50% { transform: translateY(30px) scaleX(-1); }
+  100% { left: -300px; transform: translateY(0) scaleX(1); }
+}
+
+.swimZigzagReverse {
+  animation-name: fadeInVisibility, swimZigzagReverse;
+}
+@keyframes swimZigzagReverse {
+  0% { left: 100vw; transform: translateY(0) scale(0.8) scaleX(-1); }
+  30% { transform: translateY(-50px) scaleX(-1); }
+  60% { transform: translateY(50px) scaleX(-1); }
+  100% { left: -300px; transform: translateY(0) scaleX(1); }
+}
+
+.swimLoopReverse {
+  animation-name: fadeInVisibility, swimLoopReverse;
+}
+@keyframes swimLoopReverse {
+  0% { left: 100vw; transform: translateY(0) scale(0.8) scaleX(-1); }
+  30% { left: 80vw; transform: translateY(-100px) scaleX(-1); }
+  60% { left: 50vw; transform: translateY(100px) scaleX(-1); }
+  100% { left: -300px; transform: translateY(0) scaleX(1); }
+}
+
+.swimDiveReverse {
+  animation-name: fadeInVisibility, swimDiveReverse;
+}
+@keyframes swimDiveReverse {
+  0% { left: 100vw; transform: translateY(-100px) scale(0.8) scaleX(-1); }
+  30% { transform: translateY(100px) scaleX(-1); }
+  60% { transform: translateY(-50px) scaleX(-1); }
+  100% { left: -300px; transform: translateY(50px) scaleX(1); }
+}
+
+.swimCurveReverse {
+  animation-name: fadeInVisibility, swimCurveReverse;
+}
+@keyframes swimCurveReverse {
+  0% { left: 100vw; transform: translateY(0) scale(0.8) scaleX(-1); }
+  50% { left: 50vw; transform: translateY(-200px) scaleX(-1); }
+  100% { left: -300px; transform: translateY(0) scaleX(1); }
+}
+
+.swimFigure8Reverse {
+  animation-name: fadeInVisibility, swimFigure8Reverse;
+}
+@keyframes swimFigure8Reverse {
+  0% { left: 100vw; top: 50%; transform: scale(0.8) scaleX(-1); }
+  25% { left: 75vw; top: 30%; transform: scaleX(-1); }
+  50% { left: 50vw; top: 70%; transform: scaleX(-1); }
+  75% { left: 25vw; top: 30%; transform: scaleX(1); }
+  100% { left: -300px; top: 50%; transform: scaleX(1); }
+}
